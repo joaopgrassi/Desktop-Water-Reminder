@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Drawing;
 
 namespace DesktopWaterReminder
 {
@@ -21,6 +22,8 @@ namespace DesktopWaterReminder
             base.OnStartup(e);
 
             notifyIcon = (TaskbarIcon)FindResource("NotifyIcon");
+
+            notifyIcon.ShowBalloonTip("Beba Água", "Beba água iniciado!", BalloonIcon.Info);
         }
         protected override void OnExit(ExitEventArgs e)
         {
